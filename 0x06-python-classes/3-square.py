@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-"""Working with OOP in python"""
+"""Define a class Square."""
 
 
-class Square():
-    """Implementing the square class"""
+class Square:
+    """Represent a square."""
+
     def __init__(self, size=0):
-        """ initialize the class
+        """Initialize a new square.
         Args:
-           size (int): size of the square
+            size (int): The size of the new square.
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
-            raise ValueError("size must be >= 0 ")
-        else:
-            self.__size = size
+            raise ValueError("size must be >= 0")
+        self.__size = size
 
     def area(self):
-        """Compute the area of the current square
-        Args:
-            None """
-        return (self.size * 4)
+        """Return the current area of the square."""
+        return (self.__size * self.__size)
