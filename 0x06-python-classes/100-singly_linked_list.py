@@ -75,4 +75,3 @@ class SinglyLinkedList:
             tmp = tmp.next_node
         return ('\n'.join(values))
 
-
